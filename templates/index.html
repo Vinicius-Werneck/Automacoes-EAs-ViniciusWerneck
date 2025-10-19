@@ -1,0 +1,531 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinícius Werneck - Desenvolvimento de Expert Advisors</title>
+
+    <!-- Tailwind for utilities (kept) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonts & icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="bg-dark-900 text-gray-200">
+
+    <!-- Header/Navigation -->
+    <header class="site-header sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <!-- Gradient text logo -->
+                <h1 class="logo text-2xl font-extrabold"><span class="logo-gradient">Vinícius</span> <span class="logo-gradient-alt">Werneck</span></h1>
+            </div>
+
+            <nav class="hidden md:flex space-x-6 text-sm">
+                <a href="#plataformas" class="nav-link">Plataformas</a>
+                <a href="#servicos" class="nav-link">Serviços</a>
+                <a href="#porque" class="nav-link">Por que Escolher</a>
+                <a href="#depoimentos" class="nav-link">Depoimentos</a>
+                <a href="#planos" class="nav-link">Planos</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="#contato" class="btn-primary">Solicitar Orçamento</a>
+                <button id="mobile-menu-button" class="md:hidden nav-icon" aria-label="Abrir menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden" id="mobile-menu">
+            <a href="#plataformas" class="mobile-link">Plataformas</a>
+            <a href="#servicos" class="mobile-link">Serviços</a>
+            <a href="#porque" class="mobile-link">Por que Escolher</a>
+            <a href="#depoimentos" class="mobile-link">Depoimentos</a>
+            <a href="#planos" class="mobile-link">Planos</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container mx-auto px-4 text-center">
+            <div class="hero-badge"> <i class="fas fa-code mr-2"></i> Programação Profissional de EAs</div>
+            <h1 class="hero-title"><span class="hero-gradient-blue">Vinícius</span> <span class="hero-gradient-green">Werneck</span></h1>
+            <h2 class="hero-subtitle">Matemático & Engenheiro da Computação</h2>
+            <p class="hero-desc">
+                Desenvolvimento sob demanda de <a href="#servicos" class="link-accent">Expert Advisors</a> e sistemas automatizados para as principais plataformas de trading
+            </p>
+
+            <div class="hero-ctas">
+                <a href="#contato" class="btn-cta">Solicitar Orçamento <i class="fas fa-arrow-right ml-2"></i></a>
+                <a href="#servicos" class="btn-ghost">Ver Serviços</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plataformas Suportadas -->
+    <section id="plataformas" class="section section-light">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center">Plataformas <span class="accent">Suportadas</span></h2>
+            <p class="section-subtitle text-center">Desenvolvimento especializado para as principais plataformas de trading do mercado</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
+                <!-- MetaTrader 5 -->
+                <div class="platform-card">
+                    <div class="platform-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="platform-title">MetaTrader 5</h3>
+                    <p class="platform-description">Expert Advisors, indicadores customizados e scripts MQL5</p>
+                </div>
+
+                <!-- NinjaTrader -->
+                <div class="platform-card">
+                    <div class="platform-icon"><i class="fas fa-cogs"></i></div>
+                    <h3 class="platform-title">NinjaTrader</h3>
+                    <p class="platform-description">Estratégias automatizadas e indicadores em C#</p>
+                </div>
+
+                <!-- ProfitChart -->
+                <div class="platform-card">
+                    <div class="platform-icon"><i class="fas fa-chart-bar"></i></div>
+                    <h3 class="platform-title">ProfitChart</h3>
+                    <p class="platform-description">Robôs e estudos personalizados para a plataforma brasileira</p>
+                </div>
+
+                <!-- Outras Plataformas -->
+                <div class="platform-card">
+                    <div class="platform-icon"><i class="fas fa-exchange-alt"></i></div>
+                    <h3 class="platform-title">Outras Plataformas</h3>
+                    <p class="platform-description">TradeStation, MultiCharts, cTrader e mais</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços Oferecidos -->
+    <section id="servicos" class="section section-dark">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center">Serviços <span class="accent">Oferecidos</span></h2>
+            <p class="section-subtitle text-center">Soluções completas de programação para suas necessidades de trading automatizado</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+                <!-- repeated original cards, kept text -->
+                <div class="service-card" style="border-top:4px solid #16A34A">
+                    <div class="service-icon"><i class="fas fa-robot"></i></div>
+                    <h3>Expert Advisors</h3>
+                    <p>Desenvolvimento de robôs de trading completos com sua estratégia customizada</p>
+                </div>
+
+                <div class="service-card" style="border-top:4px solid #059669">
+                    <div class="service-icon"><i class="fas fa-chart-area"></i></div>
+                    <h3>Indicadores Técnicos</h3>
+                    <p>Criação de indicadores personalizados para análise avançada de mercado</p>
+                </div>
+
+                <div class="service-card" style="border-top:4px solid #0ea5b4">
+                    <div class="service-icon"><i class="fas fa-code"></i></div>
+                    <h3>Scripts & Ferramentas</h3>
+                    <p>Automação de tarefas e ferramentas para otimizar seu workflow</p>
+                </div>
+
+                <div class="service-card" style="border-top:4px solid #F59E0B">
+                    <div class="service-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Modificação de EAs</h3>
+                    <p>Adaptação e melhoria de Expert Advisors existentes</p>
+                </div>
+
+                <div class="service-card" style="border-top:4px solid #84CC16">
+                    <div class="service-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Otimização</h3>
+                    <p>Backtesting, otimização de parâmetros e análise de performance</p>
+                </div>
+
+                <div class="service-card" style="border-top:4px solid #6366F1">
+                    <div class="service-icon"><i class="fas fa-headset"></i></div>
+                    <h3>Suporte Técnico</h3>
+                    <p>Assistência contínua e correção de bugs nos sistemas desenvolvidos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Por que escolher meus serviços (kept original) -->
+    <section id="porque" class="section section-light">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center">Por que escolher meus serviços?</h2>
+            <p class="section-subtitle text-center">Combinação única de conhecimento matemático avançado e expertise em desenvolvimento de software</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-8">
+                <div class="grid grid-cols-1 gap-6">
+                    <div class="info-card">
+                        <i class="fas fa-graduation-cap info-icon"></i>
+                        <div>
+                            <h3>Formação Sólida</h3>
+                            <p>Bacharel em Matemática e Engenharia da Computação</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fas fa-laptop-code info-icon"></i>
+                        <div>
+                            <h3>Experiência Técnica</h3>
+                            <p>Anos de experiência em desenvolvimento de sistemas automatizados</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fas fa-chart-line info-icon"></i>
+                        <div>
+                            <h3>Foco em Resultados</h3>
+                            <p>Código otimizado e testado para máxima performance</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fas fa-user-tie info-icon"></i>
+                        <div>
+                            <h3>Atendimento Personalizado</h3>
+                            <p>Projetos sob medida para suas necessidades específicas</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-card">
+                    <h3>Desenvolvimento Profissional de Alta Qualidade</h3>
+                    <p>Como matemático e engenheiro da computação, trago uma perspectiva única para o desenvolvimento de sistemas de trading. Combino rigor matemático na modelagem de estratégias com as melhores práticas de engenharia de software para criar soluções robustas, eficientes e escaláveis.</p>
+                    <a href="#contato" class="btn-primary mt-6 inline-block">Solicitar Orçamento</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos (kept original) -->
+    <section id="depoimentos" class="section section-dark">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center">O Que Dizem Meus Clientes</h2>
+            <p class="section-subtitle text-center">Depoimentos reais de traders satisfeitos com os serviços entregues.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+                <div class="testimonial-card">
+                    <p class="quote">Excelente trabalho! O EA desenvolvido superou muitas expectativas. Código limpo, bem documentado e suporte impecável.</p>
+                    <div class="author">
+                        <strong>Carlos Mendes</strong><span class="muted"> — Economista</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="quote">"Werneck transformou minha estratégia em um robô eficiente. Resultados consistentes e entrega no prazo prometido."</p>
+                    <div class="author">
+                        <strong>Ana Paula Silva</strong><span class="muted"> — Investidora</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="quote">"Profissional altamente qualificado. Adaptou meu indicador perfeitamente e ainda sugeriu melhorias que aumentaram a performance."</p>
+                    <div class="author">
+                        <strong>Roberto Oliveira</strong><span class="muted"> — Day Trader</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planos e Preços (kept original) -->
+    <section id="planos" class="section section-plans">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center">Planos e Preços</h2>
+            <p class="section-subtitle text-center">Escolha o plano ideal para suas necessidades. Valores flexíveis e personalizáveis.</p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8 max-w-4xl mx-auto">
+                <!-- Profissional -->
+                <div class="plan-card featured">
+                    <div class="popular-badge">Mais Popular</div>
+                    <div class="plan-head text-center">
+                        <h3 class="text-2xl font-bold">PROFISSIONAL</h3>
+                        <p class="muted">Melhor custo-benefício</p>
+                        <div class="price">R$ 1.500</div>
+                    </div>
+                    <ul class="features">
+                        <li>Desenvolvimento de EA complexo</li>
+                        <li>Múltiplos indicadores</li>
+                        <li>Backtesting completo</li>
+                        <li>Otimização de parâmetros</li>
+                        <li>Documentação completa</li>
+                        <li>Suporte por 60 dias</li>
+                        <li>3 revisões inclusas</li>
+                    </ul>
+                    <button onclick="openWhatsAppPlan('Profissional')" class="btn-cta w-full flex justify-center items-center">Contratar Agora</button>
+                </div>
+
+                <!-- Básico -->
+                <div class="plan-card">
+                    <div class="plan-head text-center">
+                        <h3 class="text-2xl font-bold">BÁSICO</h3>
+                        <p class="muted">Ideal para projetos simples</p>
+                        <div class="price">R$ 500</div>
+                    </div>
+                    <ul class="features">
+                        <li>Desenvolvimento de EA simples</li>
+                        <li>Indicador customizado</li>
+                        <li>Documentação básica</li>
+                        <li>Suporte por 30 dias</li>
+                        <li>1 Revisão inclusa</li>
+                    </ul>
+                    <button onclick="openWhatsAppPlan('Básico')" class="w-full flex justify-center items-center" style="background-color: #90EE90; color: #000; padding: 12px 24px; border-radius: 8px; font-weight: 600; transition: all 0.3s ease;">Contratar Agora</button>
+                </div>
+            </div>
+
+            <p class="text-center muted mt-8">Precisa de algo personalizado? <a href="#contato" class="link-accent">Entre em contato</a> para um orçamento sob medida.</p>
+        </div>
+    </section>
+
+    <!-- CTA Final (kept original) -->
+    <section class="section section-cta" id="contato">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="cta-title">Pronto para automatizar sua estratégia?</h2>
+            <p class="cta-sub">Entre em contato agora e transforme suas ideias em sistemas de trading profissionais e eficientes</p>
+
+            <div class="cta-actions">
+                <button onclick="openWhatsApp()" class="btn-whatsapp"><i class="fab fa-whatsapp mr-2"></i> Falar no WhatsApp</button>
+                <button onclick="openEmail()" class="btn-secondary"><i class="fas fa-envelope mr-2"></i> Enviar E-mail</button>
+            </div>
+
+            <p class="muted mt-6">Respondo rapidamente e forneço orçamento sem compromisso</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row justify-between items-center">
+            <div>
+                <h3 class="font-bold">&lt;/&gt; Vinicius Werneck</h3>
+                <p class="muted">Matemático & Engenheiro da Computação</p>
+                <p class="muted">Desenvolvimento Profissional de Expert Advisors</p>
+            </div>
+            <div class="muted">© 2025 Todos os direitos reservados</div>
+        </div>
+    </footer>
+
+    <!-- Modals (contact & budget) - kept from original with updated classes -->
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal hidden">
+        <div class="modal-inner">
+            <div class="modal-header">
+                <h3>Contato</h3>
+                <button onclick="closeContactModal()" aria-label="Fechar"><i class="fas fa-times"></i></button>
+            </div>
+            <form id="contactForm" class="modal-form">
+                <div class="grid md:grid-cols-2 gap-4">
+                    <input type="text" name="name" placeholder="Nome" required>
+                    <input type="email" name="email" placeholder="E-mail" required>
+                </div>
+                <input type="text" name="phone" placeholder="Telefone (opcional)">
+                <textarea name="message" rows="5" placeholder="Sua mensagem..." required></textarea>
+                <div class="modal-actions">
+                    <button type="button" class="btn-muted" onclick="closeContactModal()">Cancelar</button>
+                    <button type="submit" class="btn-cta">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Budget Modal -->
+    <div id="budgetModal" class="modal hidden">
+        <div class="modal-inner">
+            <div class="modal-header">
+                <h3>Solicitar Orçamento</h3>
+                <button onclick="closeBudgetModal()" aria-label="Fechar"><i class="fas fa-times"></i></button>
+            </div>
+            <form id="budgetForm" class="modal-form">
+                <div class="grid md:grid-cols-2 gap-4">
+                    <input type="text" name="name" placeholder="Nome" required>
+                    <input type="email" name="email" placeholder="E-mail" required>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <select name="platform">
+                        <option value="">Plataforma (opcional)</option>
+                        <option>MetaTrader 5</option>
+                        <option>NinjaTrader</option>
+                        <option>ProfitChart</option>
+                        <option>Outras</option>
+                    </select>
+                    <select name="service_type">
+                        <option value="">Tipo de serviço (opcional)</option>
+                        <option>EA</option>
+                        <option>Indicador</option>
+                        <option>Integração</option>
+                    </select>
+                </div>
+                <select name="budget_range">
+                    <option value="">Faixa de orçamento (opcional)</option>
+                    <option>R$ 500 - R$ 1.500</option>
+                    <option>R$ 1.500 - R$ 3.000</option>
+                    <option>R$ 3.000+</option>
+                </select>
+                <textarea name="description" rows="4" placeholder="Descreva o projeto (opcional)"></textarea>
+                <div class="modal-actions">
+                    <button type="button" class="btn-muted" onclick="closeBudgetModal()">Cancelar</button>
+                    <button type="submit" class="btn-cta">Solicitar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div id="toast" class="toast hidden" role="status"></div>
+
+    <!-- Scripts -->
+    <script>
+        // ======= Mobile menu toggle =======
+        document.addEventListener('DOMContentLoaded', () => {
+          const mobileBtn = document.getElementById('mobile-menu-button');
+          const mobileMenu = document.getElementById('mobile-menu');
+          if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+          }
+
+          // Hook forms in modals (if present)
+          const contactForm = document.getElementById('contactForm');
+          const budgetForm = document.getElementById('budgetForm');
+
+          if (contactForm) contactForm.addEventListener('submit', handleContactSubmit);
+          if (budgetForm) budgetForm.addEventListener('submit', handleBudgetSubmit);
+
+          // close modals on ESC
+          document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+              closeContactModal(); closeBudgetModal();
+            }
+          });
+        });
+
+        // ======= Modal helpers =======
+        function openContactModal(){ document.getElementById('contactModal')?.classList.remove('hidden'); }
+        function closeContactModal(){ document.getElementById('contactModal')?.classList.add('hidden'); }
+        function openBudgetModal(){ document.getElementById('budgetModal')?.classList.remove('hidden'); }
+        function closeBudgetModal(){ document.getElementById('budgetModal')?.classList.add('hidden'); }
+
+        // Close modals clicking on backdrop
+        document.addEventListener('click', (e) => {
+          const contactModal = document.getElementById('contactModal');
+          const budgetModal = document.getElementById('budgetModal');
+          if (contactModal && !contactModal.classList.contains('hidden') && e.target === contactModal) closeContactModal();
+          if (budgetModal && !budgetModal.classList.contains('hidden') && e.target === budgetModal) closeBudgetModal();
+        });
+
+        // ======= Toast =======
+        function showToast(message, isError=false){
+          const toastEl = document.getElementById('toast');
+          if (!toastEl) return;
+          toastEl.textContent = message;
+          toastEl.style.background = isError ? 'linear-gradient(90deg,#ef4444,#f97316)' : 'linear-gradient(90deg,#10b981,#06b6d4)';
+          toastEl.classList.remove('hidden');
+          setTimeout(()=> toastEl.classList.add('hidden'), 4500);
+        }
+
+        // ======= Contact submit (AJAX, JSON) =======
+        async function handleContactSubmit(e){
+          e.preventDefault();
+          const form = e.target;
+          const fd = new FormData(form);
+          const payload = {
+            name: fd.get('name') || '',
+            email: fd.get('email') || '',
+            phone: fd.get('phone') || '',
+            message: fd.get('message') || ''
+          };
+
+          const submitBtn = form.querySelector('button[type="submit"]');
+          const orig = submitBtn ? submitBtn.innerHTML : null;
+          try {
+            if (submitBtn) { submitBtn.disabled = true; submitBtn.innerHTML = 'Enviando...'; }
+            const res = await fetch('/submit_contact', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(payload)
+            });
+            const json = await res.json();
+            if (res.ok && json.success) {
+              showToast(json.message || 'Mensagem enviada com sucesso!');
+              form.reset();
+              closeContactModal();
+            } else {
+              showToast(json.error || 'Erro ao enviar mensagem.', true);
+            }
+          } catch (err){
+            console.error(err);
+            showToast('Erro ao enviar mensagem. Verifique a conexão.', true);
+          } finally {
+            if (submitBtn) { submitBtn.disabled = false; if (orig) submitBtn.innerHTML = orig; }
+          }
+        }
+
+        // ======= Budget submit (AJAX) =======
+        async function handleBudgetSubmit(e){
+          e.preventDefault();
+          const form = e.target;
+          const fd = new FormData(form);
+          const payload = {
+            name: fd.get('name') || '',
+            email: fd.get('email') || '',
+            platform: fd.get('platform') || '',
+            service_type: fd.get('service_type') || '',
+            budget_range: fd.get('budget_range') || '',
+            description: fd.get('description') || ''
+          };
+
+          const submitBtn = form.querySelector('button[type="submit"]');
+          const orig = submitBtn ? submitBtn.innerHTML : null;
+          try {
+            if (submitBtn) { submitBtn.disabled = true; submitBtn.innerHTML = 'Enviando...'; }
+            const res = await fetch('/request_budget', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(payload)
+            });
+            const json = await res.json();
+            if (res.ok && json.success) {
+              showToast(json.message || 'Solicitação enviada com sucesso!');
+              form.reset();
+              closeBudgetModal();
+            } else {
+              showToast(json.error || 'Erro ao solicitar orçamento.', true);
+            }
+          } catch (err){
+            console.error(err);
+            showToast('Erro ao solicitar orçamento. Verifique a conexão.', true);
+          } finally {
+            if (submitBtn) { submitBtn.disabled = false; if (orig) submitBtn.innerHTML = orig; }
+          }
+        }
+
+        // ======= WhatsApp / Email integration (your provided contacts) =======
+        function openWhatsApp(){
+          // country code +55, area 21, number 974424452
+          const phone = "5521974424452";
+          const message = "Olá Vinícius! Gostaria de solicitar um orçamento para desenvolvimento de Expert Advisor.";
+          const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+          window.open(url, '_blank');
+        }
+
+        function openWhatsAppPlan(plano){
+          const phone = "5521974424452";
+          const message = `Olá Vinícius! Gostaria de contratar o plano ${plano} para desenvolvimento de Expert Advisor.`;
+          const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+          window.open(url, '_blank');
+        }
+
+        function openEmail(){
+          const email = "viniciusonrj@gmail.com";
+          const subject = "Solicitação de Orçamento - Desenvolvimento EA";
+          const body = "Olá Vinícius,%0D%0A%0D%0AGostaria de solicitar um orçamento para desenvolvimento de Expert Advisor.%0D%0A%0D%0A[Descreva seu projeto aqui]";
+          const url = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${body}`;
+          window.location.href = url;
+        }
+    </script>
+</body>
+</html>
